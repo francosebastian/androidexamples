@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 import com.francosebastian.mvpwithdepencyinjection.application.AppController;
+import com.francosebastian.mvpwithdepencyinjection.screens.profiles.ProfilesScreenActivity;
 import com.francosebastian.mvpwithdepencyinjection.screens.splash.core.SplashPresenter;
 import com.francosebastian.mvpwithdepencyinjection.screens.splash.core.SplashView;
 import com.francosebastian.mvpwithdepencyinjection.screens.splash.dagger.DaggerSplashComponent;
@@ -49,7 +50,7 @@ public class SplashScreenActivity extends AppCompatActivity {
 
     public void showHeroesListActivity() {
         Log.d("loaded", "ok showed");
-        Intent i = new Intent(this, SplashScreenActivity.class);
+        Intent i = new Intent(this, ProfilesScreenActivity.class);
         startActivity(i);
     }
 

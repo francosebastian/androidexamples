@@ -34,7 +34,7 @@ public class SplashModel {
 
 
     public void gotoHeroesListActivity() {
-        //splashContext.showHeroesListActivity();
+         splashContext.showHeroesListActivity();
 
     }
 
