@@ -27,9 +27,9 @@ public class ProfilesViewHolder extends RecyclerView.ViewHolder {
     @BindView(R.id.item_profile_firstname)
     TextView firstNameProfile;
     @BindView(R.id.item_profile_lastname)
-    TextView dateReleaseHero;
-    @BindView(R.id.item_profile_text)
-    TextView descriptionHero;
+    TextView lastNameProfile;
+    @BindView(R.id.item_profile_email)
+    TextView emailProfile;
 
     public ProfilesViewHolder(View itemView, PublishSubject<Integer> clickSubject) {
         super(itemView);
@@ -43,8 +43,8 @@ public class ProfilesViewHolder extends RecyclerView.ViewHolder {
         //Glide.with(view.getContext()).load(hero.getImage()).into(imageHero);
 
         firstNameProfile.setText(TextUtils.isEmpty(profile.getFirstname()) ? "Sin nombre" : profile.getFirstname());
-        firstNameProfile.setText(TextUtils.isEmpty(profile.getLastname()) ? "Sin apellido" : profile.getLastname());
-        firstNameProfile.setText(TextUtils.isEmpty(profile.getEmail()) ? "Sin nombre" : profile.getEmail());
+        lastNameProfile.setText(TextUtils.isEmpty(profile.getLastname()) ? "Sin apellido" : profile.getLastname());
+        emailProfile.setText(TextUtils.isEmpty(profile.getEmail()) ? "Sin Email" : profile.getEmail());
 
         //separatorHero.setBackgroundColor(Color.parseColor(hero.getColor()));
     }

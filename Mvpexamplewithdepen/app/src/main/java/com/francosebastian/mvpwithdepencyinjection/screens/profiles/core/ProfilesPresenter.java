@@ -2,6 +2,7 @@ package com.francosebastian.mvpwithdepencyinjection.screens.profiles.core;
 
 import android.util.Log;
 
+
 import com.francosebastian.mvpwithdepencyinjection.models.Profile;
 import com.francosebastian.mvpwithdepencyinjection.utils.Rx.RxSchedulers;
 import com.francosebastian.mvpwithdepencyinjection.utils.UiUtils;
@@ -59,10 +60,10 @@ public class ProfilesPresenter {
                 filter(isNetworkAvailable -> true).
                 flatMap(isAvailable -> model.provideListProfiles()).
                 subscribeOn(rxSchedulers.internet()).
-                observeOn(rxSchedulers.androidThread()).subscribe(heroes -> {
+                observeOn(rxSchedulers.androidThread()).subscribe(profiless -> {
                     Log.d("ok loaded", "cccc");
-                    //view.swapAdapter((ArrayList<Profile>) profiles.getElements());
-                    //profiles = (ArrayList<Profile>) profiles.getElements();
+                    view.swapAdapter((ArrayList<Profile>) profiless.getElements());
+                    profiles = (ArrayList<Profile>) profiless.getElements();
                 }, throwable -> {
                     UiUtils.handleThrowable(throwable);
                 }

@@ -2,8 +2,11 @@ package com.francosebastian.mvpwithdepencyinjection.screens.profiles.core;
 
 import com.francosebastian.mvpwithdepencyinjection.api.ProfileApi;
 import com.francosebastian.mvpwithdepencyinjection.models.Profile;
+import com.francosebastian.mvpwithdepencyinjection.models.Profiles;
 import com.francosebastian.mvpwithdepencyinjection.screens.profiles.ProfilesScreenActivity;
 import com.francosebastian.mvpwithdepencyinjection.utils.NetworkUtils;
+
+import java.util.List;
 
 import rx.Observable;
 
@@ -21,7 +24,7 @@ public class ProfilesModel {
         this.context = context;
     }
 
-    Observable<Profile> provideListProfiles(){
+    Observable<Profiles> provideListProfiles(){
         return api.getProfiles();
     }
 

@@ -1,6 +1,9 @@
 package com.francosebastian.mvpwithdepencyinjection.api;
 
 import com.francosebastian.mvpwithdepencyinjection.models.Profile;
+import com.francosebastian.mvpwithdepencyinjection.models.Profiles;
+
+import java.util.List;
 
 import retrofit2.http.GET;
 import rx.Observable;
@@ -11,6 +14,6 @@ import rx.Observable;
 
 public interface ProfileApi {
     @GET("profiles")
-    Observable<Profile> getProfiles();
+    Observable<Profiles> getProfiles();
 }
 

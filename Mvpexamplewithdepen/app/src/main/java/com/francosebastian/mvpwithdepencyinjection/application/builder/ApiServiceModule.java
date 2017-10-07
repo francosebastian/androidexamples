@@ -16,7 +16,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 @Module
 public class ApiServiceModule {
 
-    private static final String BASE_URL = "http://localhost:3000/";
+    private static final String BASE_URL = "http://10.0.2.2:3000/";
     @AppScope
     @Provides
     ProfileApi provideApiService(OkHttpClient client, GsonConverterFactory gson, RxJavaCallAdapterFactory rxAdapter)

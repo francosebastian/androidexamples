@@ -2,8 +2,11 @@ package com.francosebastian.mvpwithdepencyinjection.screens.splash.core;
 
 import com.francosebastian.mvpwithdepencyinjection.api.ProfileApi;
 import com.francosebastian.mvpwithdepencyinjection.models.Profile;
+import com.francosebastian.mvpwithdepencyinjection.models.Profiles;
 import com.francosebastian.mvpwithdepencyinjection.screens.splash.SplashScreenActivity;
 import com.francosebastian.mvpwithdepencyinjection.utils.NetworkUtils;
+
+import java.util.List;
 
 import rx.Observable;
 
@@ -24,7 +27,7 @@ public class SplashModel {
 
     }
 
-    Observable<Profile> provideListHeroes() {
+    Observable<Profiles> provideListHeroes() {
         return api.getProfiles();
     }
 
